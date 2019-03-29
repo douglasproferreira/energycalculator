@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>EnergyCalculator</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img class="theme" src="image/theme.jpeg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            EnergyCalculator
+        </a>
+    </nav>
+
+    <div class="result">
+        <div class="tableprice">
+            <p>Produto</p>
+            <p>Qtdade</p>
+            <p>Potência</p>
+            <p>Horas</p>
+            <p>Total Mês </p>
+        </div>
+    </div>
+
+    <div class="botao">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Inserir
+        </button>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Inserir Equipamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="color">Equipamento Elétrico</label>
+                            <input class="form-control aparelho" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Descrição...">
+                            <small id="ipHelp" class="form-text text-muted">Digite o nome do aparelho.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="color">Quantidade do Equipamento</label>
+                            <input type="number" class="form-control qtdade" id="exampleInputPassword1" placeholder="Qtdade...">
+                            <small id="subredHelp" class="form-text text-muted">Digite a quantidade desse equipamento
+                                na residência.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="color">Quantidade de Horas</label>
+                            <input type="number" class="form-control horas" id="exampleInputPassword1" placeholder="Horas(hs)...">
+                            <small id="subredHelp" class="form-text text-muted">Digite a quantidade de horas que o
+                                aparelho fica ligado.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="color">Potência do Aparelho</label>
+                            <input type="text" class="form-control potencia" id="exampleInputPassword1" placeholder="Potência(WATTS)...">
+                            <small id="subredHelp" class="form-text text-muted">Digite a potência do aparelho em Kw.</small>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary calc">Calcular</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="total">
+        <p>Total da Conta: </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
